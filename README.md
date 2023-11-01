@@ -1,12 +1,22 @@
 # homebrew-aws-sso-get-creds
 Homebrew package with shell functions to export AWS credentials from AWS SSO
 
-To install run this commands:
+## Installation
+
+Install dependencies:
+
+```
+brew tap jaxxstorm/tap
+brew install aws-sso-creds
+```
+Install functions:
 
 ```
 brew tap kjenney/homebrew-aws-sso-get-creds
 brew install kjenney/aws-sso-get-creds/aws-sso-get-creds
 ```
+
+## Removing 
 
 To remove run this command:
 
