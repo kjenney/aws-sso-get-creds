@@ -11,8 +11,8 @@ brew install kjenney/aws-sso-get-creds/aws-sso-get-creds
 To remove run this command:
 
 ```
-brew untap kjenney/aws-sso-get-creds
 brew uninstall kjenney/aws-sso-get-creds/aws-sso-get-creds
+brew untap kjenney/aws-sso-get-creds
 ```
 
 ## Caveats
