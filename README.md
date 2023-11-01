@@ -8,7 +8,7 @@ brew tap kjenney/homebrew-aws-sso-get-creds
 brew install kjenney/aws-sso-get-creds/aws-sso-get-creds
 ```
 
-To remove the app run this command:
+To remove run this command:
 
 ```
 brew untap kjenney/aws-sso-get-creds
