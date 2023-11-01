@@ -1,4 +1,4 @@
-# aws-sso-get-creds
+# homebrew-aws-sso-get-creds
 Homebrew package with shell functions to export AWS credentials from AWS SSO
 
 To install run this commands:
