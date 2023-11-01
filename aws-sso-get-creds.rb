@@ -5,7 +5,7 @@ class AwsSsoGetCreds < Formula
   sha256 "56a6cd1ef8174a27cb5fea394163814bc126ebdc9e8acf1ca4f7e61d9148b7a0"
 
   def install
-    bin.install "./aws-sso-get-creds.sh"
+    bin.install "./bin/aws-sso-get-creds.sh"
   end
 
   def caveats
