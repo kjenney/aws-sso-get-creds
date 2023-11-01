@@ -5,7 +5,6 @@ class AwsSsoGetCreds < Formula
   sha256 "12843cca35b67524f2ed462081839b8df523f25abbb354180e34c252edc8c46a"
 
   depends_on "aws-sso-creds"
-  depends_on "pulumi" # For testing
   
   def install
     bin.install "./bin/aws-sso-get-creds.sh"
