@@ -16,7 +16,7 @@ To remove the app run this command:
 
 Source aws-sso-get-creds in `~/.bash_profile` or `~/.bashrc` to load this in your terminal.
 
-`source /usr/local/bin/aws-sso-get-creds.sh`
+`source /opt/homebrew/bin/aws-sso-get-creds.sh`
 
 ## Running
 
