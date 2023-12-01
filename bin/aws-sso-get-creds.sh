@@ -1,5 +1,10 @@
 get_sso_session_expiration() {
-	aws configure get sso_start_url --profile $1 | xargs -I {} grep -h {} ~/.aws/sso/cache/*.json | jq .expiresAt | xargs -I {} sh -c 'TZ="UTC" date -j -f "%Y-%m-%dT%H:%M:%S" "+%s" $1 2>/dev/null' -- {} | head -n 1
+        epoch=0
+        json_files=$(find ~/.aws/sso/cache -type f -name "*.json")
+        if [ ! -z "$json_files" ]; then
+                epoch=$(aws configure get sso_start_url --profile $1 | xargs -I {} grep -h {} ~/.aws/sso/cache/*.json | jq .expiresAt | xargs -I {} sh -c 'TZ="UTC" date -j -f "%Y-%m-%dT%H:%M:%S" "+%s" $1 2>/dev/null' -- {} | head -n 1)
+        fi
+        echo $epoch
 }
 
 # Check if a passed epoch is in the past
@@ -18,6 +23,7 @@ do_we_have_a_valid_session() {
 	if [[ $(do_we_have_a_session $2) = "true" && $(is_epoch_in_past $1) = "false" ]]; then echo "true"; else echo "false"; fi
 }
 
+# Cleanup sessions older than a day
 cleanup_old_sso_cache() {
 	find ~/.aws/sso/cache/ -type f -mtime +1 -delete
 }
