@@ -34,7 +34,6 @@ cleanup_old_sso_cache() {
 combine_aws_profiles() {
         other_configs=$(find ~/.aws/ -type f -name "config-*")
         if [ ! -z "$other_configs" ]; then
-                echo "Combining"
                 cat ~/.aws/config-* > ~/.aws/config
         fi
 }
