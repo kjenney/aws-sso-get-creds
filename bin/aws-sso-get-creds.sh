@@ -28,8 +28,15 @@ cleanup_old_sso_cache() {
 	find ~/.aws/sso/cache/ -type f -mtime +1 -delete
 }
 
+# If you have more than one AWS organization you may want to genearte the configs
+# and then combine them like this
+# If not, good for you, this will be bypassed
 combine_aws_profiles() {
-	cat ~/.aws/config-* > ~/.aws/config
+        other_configs=$(find ~/.aws/ -type f -name "config-*")
+        if [ ! -z "$other_configs" ]; then
+                echo "Combining"
+                cat ~/.aws/config-* > ~/.aws/config
+        fi
 }
 
 # When a profile is passed by name check to make sure it exists
