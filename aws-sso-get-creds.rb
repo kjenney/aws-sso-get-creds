@@ -1,8 +1,8 @@
 class AwsSsoGetCreds < Formula
   desc "Shell functions to export AWS credentials from AWS SSO"
   homepage "https://github.com/kjenney/homebrew-aws-sso-get-creds"
-  url "https://github.com/kjenney/homebrew-aws-sso-get-creds/archive/1.1.tar.gz"
-  sha256 "776dacb8b47696e3fefc03fc3a57bb892204f323da0d81abfc56cfbc8393fcb3"
+  url "https://github.com/kjenney/homebrew-aws-sso-get-creds/archive/1.2.tar.gz"
+  sha256 "97a49304d9dec7e40097bd4162b105fd9f6ce6fcf4f84352aaac95a7b24f087f"
 
   depends_on "aws-sso-creds"
   
