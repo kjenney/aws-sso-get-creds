@@ -27,3 +27,9 @@ Once the functions are referenced in `~/.bash_profile` or `~/.bashrc` you can ge
 
 1. Run `aws-sso-get-creds` and you'll be presented with a list of profiles and prompted to enter a number that corresponds to a profile in the list.
 2. Type `aws-sso-get-creds` and tab to autocomplete a list of AWS profiles.
+
+## Additional options
+
+I've generated a set of configs for each of my AWS organization that are for my own use. 
+If you would like to do this you can create them and place them in `~/.aws/` with a name such as `~/.aws/config-example` and/or `~/.aws/config-example2`.
+If present they will be combined into `~/.aws/config`.
